@@ -21,4 +21,13 @@
     return personController;
 }
 
+- (instancetype)initSharedInstance
+{
+    if (self = [super init]) {
+        // configure the shared instance any way you like
+    }
+    return self;
+    
+}
+
 @end

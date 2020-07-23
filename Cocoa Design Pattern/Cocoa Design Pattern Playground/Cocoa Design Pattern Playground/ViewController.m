@@ -22,6 +22,9 @@
     
     PersonController *sharedInstanceA = PersonController.sharedPersonController;
     NSLog(@"Person Controller: %@", sharedInstanceA);
+    
+    PersonController *sharedInstanceB = PersonController.sharedPersonController;
+    NSLog(@"Person Controller: %@", sharedInstanceB);
 }
 
 
