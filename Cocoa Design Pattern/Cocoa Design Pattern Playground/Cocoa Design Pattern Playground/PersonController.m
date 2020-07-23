@@ -15,6 +15,11 @@
 {
     static PersonController *personController = nil;
     
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        personController = [[self alloc] initSharedInstance];
+    });
+    
     if (!personController) {
         personController = [[self alloc] init];
     }
