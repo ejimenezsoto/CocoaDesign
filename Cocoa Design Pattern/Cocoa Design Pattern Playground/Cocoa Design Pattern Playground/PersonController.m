@@ -10,4 +10,15 @@
 
 @implementation PersonController
 
+
++ (instancetype)sharedPersonController
+{
+    static PersonController *personController = nil;
+    
+    if (!personController) {
+        personController = [[self alloc] init];
+    }
+    return personController;
+}
+
 @end
