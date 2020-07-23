@@ -7,6 +7,7 @@
 //
 
 #import "PersonController.h"
+#import "Person.h"
 
 @implementation PersonController
 
@@ -45,6 +46,9 @@
    // if ([self.delegate conformsToProtocol:@protocol(PersonControllerDelegate)]) { // This method sucks
     
     if ([self.delegate respondsToSelector:@selector(personController:didObserveNewBirth:)]) {
+        
+        Person *person = [[Person alloc] init];
+        
     [self.delegate personController:self didObserveNewBirth:@"New Child"];
     
     }

@@ -23,6 +23,26 @@
         _hairColor = aHairColor;
     }
     return self;
+}
+
+
+- (NSString *)generateRandomName
+{
+    static NSArray *firstNames = nil;
+    static NSArray *lastNames = nil;
     
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        firstNames = @[@"Dimitri", @"Skyler", @"Chris", @"Joshua"];
+        lastNames = @[@"Sharp", @"Gonzales", @"Suzuki", @"Buniol"];
+    });
+    
+    NSUInteger randomIndex = arc4random_uniform((uint32_t)firstNames.count);
+    NSString *randomFirstName = [firstNames objectAtIndex:randomIndex];
+    
+    NSString *randomLastName = [lastNames objectAtIndex:arc4random_uniform((uint32_t)lastNames.count)];
+    
+    
+    return [NSString  stringWithFormat:@"%@ %@", randomFirstName, randomLastName];
 }
 @end
