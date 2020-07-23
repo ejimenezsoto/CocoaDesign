@@ -15,6 +15,7 @@
 		799D111E24C9EE4000B8F72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799D111C24C9EE4000B8F72A /* LaunchScreen.storyboard */; };
 		799D112124C9EE4000B8F72A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 799D112024C9EE4000B8F72A /* main.m */; };
 		799D112924C9EF1900B8F72A /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799D112824C9EF1900B8F72A /* PersonController.m */; };
+		799D112C24C9FE7A00B8F72A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 799D112B24C9FE7A00B8F72A /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		799D112024C9EE4000B8F72A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		799D112724C9EF1900B8F72A /* PersonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = "<group>"; };
 		799D112824C9EF1900B8F72A /* PersonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = "<group>"; };
+		799D112A24C9FE7A00B8F72A /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		799D112B24C9FE7A00B8F72A /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				799D111524C9EE3F00B8F72A /* ViewController.m */,
 				799D112724C9EF1900B8F72A /* PersonController.h */,
 				799D112824C9EF1900B8F72A /* PersonController.m */,
+				799D112A24C9FE7A00B8F72A /* Person.h */,
+				799D112B24C9FE7A00B8F72A /* Person.m */,
 				799D111724C9EE3F00B8F72A /* Main.storyboard */,
 				799D111A24C9EE4000B8F72A /* Assets.xcassets */,
 				799D111C24C9EE4000B8F72A /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799D112C24C9FE7A00B8F72A /* Person.m in Sources */,
 				799D111624C9EE3F00B8F72A /* ViewController.m in Sources */,
 				799D111024C9EE3F00B8F72A /* AppDelegate.m in Sources */,
 				799D112924C9EF1900B8F72A /* PersonController.m in Sources */,

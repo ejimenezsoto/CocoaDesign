@@ -10,12 +10,27 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PersonController : NSObject
+@protocol  PersonControllerDelegate;
 
+@interface PersonController : NSObject
 
 // static let shared = PersonController()
 + (instancetype)sharedPersonController;
 //@property (nonatomic, class, readonly) PersonController *sharedPersonController;
+
+@property (nonatomic, weak) id<PersonControllerDelegate> delegate;
+
+@end
+
+
+
+@protocol PersonControllerDelegate <NSObject>
+
+@required // implicit
+
+@optional
+
+- (void)personController:(PersonController *)PersonController didObserveNewBirth:(id)person;
 
 @end
 

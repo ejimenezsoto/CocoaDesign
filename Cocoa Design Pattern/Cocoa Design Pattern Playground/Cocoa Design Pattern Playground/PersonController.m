@@ -30,9 +30,24 @@
 {
     if (self = [super init]) {
         // configure the shared instance any way you like
+        
+        [NSTimer scheduledTimerWithTimeInterval:5
+                                         target:self
+                                       selector:@selector(recordNewBirth:)
+                                       userInfo:nil
+                                        repeats:YES];
     }
     return self;
+}
+
+- (void) recordNewBirth:(id)sender
+{
+   // if ([self.delegate conformsToProtocol:@protocol(PersonControllerDelegate)]) { // This method sucks
     
+    if ([self.delegate respondsToSelector:@selector(personController:didObserveNewBirth:)]) {
+    [self.delegate personController:self didObserveNewBirth:@"New Child"];
+    
+    }
 }
 
 @end
